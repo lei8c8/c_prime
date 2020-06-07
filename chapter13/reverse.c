@@ -19,4 +19,7 @@ int main(void)
         printf("reverse can't open %s\n", file);
         exit(1);
     }
+
+    fseek(fp, 0L, SEEK_END); // go to the end of file
+    last = ftell(fp);
 }
